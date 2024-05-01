@@ -19,12 +19,12 @@ class SGD:
             self.sgd(j)
             print(self.w)
 
-x = [ [1, 1], [1, 2], [1, 3] ]
-y = [3, 6, 9]
+x = [ [1, 4], [2, 5], [3, 6] ]
+y = [2, 4, 8]
 w = [0, 0]
 a = 0.01
 
 sGD = SGD(x, y, w, a)
-sGD.iteration(2, 2)
+sGD.iteration(2, 1)
 
 

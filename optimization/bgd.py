@@ -8,17 +8,18 @@ class BGD:
         self.alpha = alpha
 
     def BGD(self)->None:
-        n = len(self.y)
+        n = len(self.w)
+        m = len(self.y)
 
         for i in range(n):
 
             sum_vec = []
             temp_array = []
 
-            for j in range(n):
+            for j in range(m):
                 temp_array.append((self.w[i] * self.x[i][j]) - self.y[j])
 
-            for j in range(n):
+            for j in range(m):
                 sum_vec.append(temp_array[j] * self.x[i][j])
 
             all_sum = sum(sum_vec)
@@ -29,9 +30,9 @@ class BGD:
             self.BGD()
             print(self.w)
 
-x = [[1, 1, 1], [1, 2, 3], [1, 3, 5]]
-y = [5, 13, 21]
-w = [0, 0, 0]
+x = [[468.0, 616.0, 594.0, 625.0, 963.0, 440.0, 255.0]]
+y = [1.08, 1.42, 1.37, 1.44, 2.21, 1.01, 0.59]
+w = [0]
 a = 0.01
 bgd = BGD(x, y, w, a)
-bgd.iteration(2)
+bgd.iteration(4)
